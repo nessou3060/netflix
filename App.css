@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+}
+.global {
+  margin: 0 0 55px 65px;
+}
+
+.logo {
+  height: 110px;
+  margin-left: 30px;
+}
+.title {
+  color: white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.movies-list {
+  display: flex;
+  overflow-x: auto;
+}
+
+.movies-list img {
+  width: 250px;
+}
