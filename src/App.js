@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import MoviesList from "./assets/movies.json";
+import Logo from "./assets/logo.png";
+import Section from "./composant/Section";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="movies">
+      <img className="logo " src={Logo} />
+      {MoviesList.map((element, i) => {
+        return (
+          <Section
+            key={i}
+            category={element.category}
+            images={element.images}
+          />
+        );
+      })}
     </div>
   );
-}
-
+};
 export default App;
